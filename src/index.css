@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: primaryFont;
+  src: url(./assets/fonts/Helvetica\ Neue\ Medium\ Extended.ttf);
+}
+
+* {
+  font-family: primaryFont;
+}
+
+html, 
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bgColor);
+  color: white;
+  overflow-x: hidden;
+}
+
+:root {
+  --primaryColor: #007FFF;
+  --secColor: #395AFF;
+  --secBg: #395aff7d;
+  --bgColor: #0E0A09;
+  --btnColor: linear-gradient(to top, #007FFF, #395AFF);
+  --highlight: #ffd900;
+}
+
+.partner-title {
+  clip-path: polygon(0 0, 81% 1%, 100% 100%, 0% 100%);
+  border-radius: 1rem;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  /* display: inline-block; */
+  transform: translateX(-100%);
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
